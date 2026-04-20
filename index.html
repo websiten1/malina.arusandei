@@ -127,21 +127,49 @@
         <div class="hero__visual reveal reveal--right">
           <div class="hero__card">
             <div class="hero__card-inner">
-              <svg class="hero__nail" viewBox="0 0 200 320" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <svg class="hero__nail" viewBox="0 0 220 340" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <defs>
-                  <linearGradient id="nailGrad" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stop-color="#fff"/>
-                    <stop offset="40%" stop-color="#f3dccb"/>
-                    <stop offset="100%" stop-color="#c89b7a"/>
+                  <linearGradient id="heroFinger" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#f5d5b8" stop-opacity="0"/>
+                    <stop offset="55%" stop-color="#eec7a5" stop-opacity="0.45"/>
+                    <stop offset="100%" stop-color="#d9a887" stop-opacity="0.85"/>
                   </linearGradient>
-                  <linearGradient id="nailShine" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+                  <linearGradient id="heroNail" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#ffffff"/>
+                    <stop offset="28%" stop-color="#fdf0de"/>
+                    <stop offset="72%" stop-color="#e8c8a3"/>
+                    <stop offset="100%" stop-color="#b78054"/>
+                  </linearGradient>
+                  <linearGradient id="heroEdge" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#ffffff" stop-opacity="0.85"/>
                     <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
                   </linearGradient>
+                  <linearGradient id="heroShine" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+                    <stop offset="50%" stop-color="#ffffff" stop-opacity="0.55"/>
+                    <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+                  </linearGradient>
+                  <radialGradient id="heroCuticle" cx="0.5" cy="0" r="0.6">
+                    <stop offset="0%" stop-color="#c89a75" stop-opacity="0.5"/>
+                    <stop offset="100%" stop-color="#c89a75" stop-opacity="0"/>
+                  </radialGradient>
                 </defs>
-                <path d="M40 40 Q100 -10 160 40 L150 290 Q100 315 50 290 Z" fill="url(#nailGrad)"/>
-                <path d="M55 50 Q100 15 145 50 L130 140 Q100 150 70 140 Z" fill="url(#nailShine)" opacity="0.7"/>
-                <path d="M40 275 Q100 295 160 275 L155 290 Q100 315 45 290 Z" fill="#ffffff" opacity="0.85"/>
+                <!-- Finger silhouette -->
+                <path d="M45 340 L45 95 Q45 42 110 30 Q175 42 175 95 L175 340 Z" fill="url(#heroFinger)"/>
+                <!-- Nail shadow -->
+                <ellipse cx="110" cy="258" rx="48" ry="6" fill="#000" opacity="0.08"/>
+                <!-- Nail plate (almond) -->
+                <path d="M60 95 Q60 45 110 38 Q160 45 160 95 L154 240 Q146 258 110 262 Q74 258 66 240 Z" fill="url(#heroNail)"/>
+                <!-- Free edge highlight -->
+                <path d="M60 95 Q60 45 110 38 Q160 45 160 95 L158 128 Q135 112 110 112 Q85 112 62 128 Z" fill="url(#heroEdge)"/>
+                <!-- Cuticle soft shade at top of nail -->
+                <path d="M60 95 Q60 45 110 38 Q160 45 160 95 L155 110 Q135 95 110 93 Q85 95 65 110 Z" fill="url(#heroCuticle)"/>
+                <!-- Shine highlight -->
+                <ellipse cx="92" cy="160" rx="14" ry="70" fill="url(#heroShine)"/>
+                <!-- Cuticle line near finger -->
+                <path d="M66 242 Q110 262 154 242" stroke="#c89a75" stroke-width="1.2" fill="none" opacity="0.5"/>
+                <!-- Fine nail bed line -->
+                <path d="M70 245 Q110 255 150 245" stroke="#ffffff" stroke-width="0.8" fill="none" opacity="0.6"/>
               </svg>
               <span class="hero__card-label">Nude Glow · Semipermanent</span>
             </div>
@@ -503,51 +531,165 @@
       </div>
 
       <div class="gallery__grid">
+        <!-- 1. NUDE GLOW -->
         <figure class="tile reveal" data-h="tall">
           <div class="tile__art tile__art--nude">
-            <svg viewBox="0 0 200 300" aria-hidden="true"><path d="M70 40 Q100 0 130 40 L120 270 Q100 290 80 270 Z" fill="url(#tg1)"/><defs><linearGradient id="tg1" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#d5a876"/></linearGradient></defs></svg>
+            <svg viewBox="0 0 220 340" aria-hidden="true" preserveAspectRatio="xMidYMax meet">
+              <defs>
+                <linearGradient id="g1-finger" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f5d5b8" stop-opacity="0"/><stop offset="1" stop-color="#e0b088" stop-opacity=".6"/></linearGradient>
+                <linearGradient id="g1-nail" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset=".3" stop-color="#fdefdd"/><stop offset="1" stop-color="#c48d63"/></linearGradient>
+                <linearGradient id="g1-shine" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".5"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+              </defs>
+              <path d="M50 340 L50 100 Q50 48 110 35 Q170 48 170 100 L170 340 Z" fill="url(#g1-finger)"/>
+              <ellipse cx="110" cy="258" rx="46" ry="6" fill="#000" opacity=".08"/>
+              <path d="M62 100 Q62 50 110 43 Q158 50 158 100 L152 242 Q144 258 110 262 Q76 258 68 242 Z" fill="url(#g1-nail)"/>
+              <path d="M62 100 Q62 50 110 43 Q158 50 158 100 L156 130 Q135 115 110 115 Q85 115 64 130 Z" fill="#fff" opacity=".55"/>
+              <ellipse cx="92" cy="165" rx="11" ry="62" fill="url(#g1-shine)"/>
+              <path d="M68 244 Q110 262 152 244" stroke="#c89a75" stroke-width="1.2" fill="none" opacity=".5"/>
+            </svg>
           </div>
           <figcaption>Nude Glow</figcaption>
         </figure>
+
+        <!-- 2. FRENCH REVERSE -->
         <figure class="tile reveal" data-h="med">
           <div class="tile__art tile__art--dark">
-            <svg viewBox="0 0 200 240" aria-hidden="true"><rect x="60" y="30" width="80" height="180" rx="38" fill="#1a140e"/><path d="M60 50 Q100 30 140 50 L140 70 Q100 54 60 70 Z" fill="#d8b890"/></svg>
+            <svg viewBox="0 0 220 280" aria-hidden="true" preserveAspectRatio="xMidYMax meet">
+              <defs>
+                <linearGradient id="g2-finger" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f5d5b8" stop-opacity="0"/><stop offset="1" stop-color="#d9a887" stop-opacity=".55"/></linearGradient>
+                <linearGradient id="g2-base" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a1810"/><stop offset="1" stop-color="#4a2e1e"/></linearGradient>
+                <linearGradient id="g2-tip" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#f0d9bc"/></linearGradient>
+              </defs>
+              <path d="M50 280 L50 80 Q50 36 110 25 Q170 36 170 80 L170 280 Z" fill="url(#g2-finger)"/>
+              <ellipse cx="110" cy="208" rx="46" ry="6" fill="#000" opacity=".08"/>
+              <!-- nail tip (cream) -->
+              <path d="M62 80 Q62 40 110 33 Q158 40 158 80 L152 192 Q144 208 110 212 Q76 208 68 192 Z" fill="url(#g2-tip)"/>
+              <!-- reverse french: dark band at cuticle -->
+              <path d="M62 80 Q62 40 110 33 Q158 40 158 80 L156 118 Q135 105 110 105 Q85 105 64 118 Z" fill="url(#g2-base)"/>
+              <!-- shine on tip -->
+              <ellipse cx="92" cy="160" rx="10" ry="42" fill="#fff" opacity=".45"/>
+              <path d="M68 194 Q110 212 152 194" stroke="#c89a75" stroke-width="1.2" fill="none" opacity=".5"/>
+            </svg>
           </div>
           <figcaption>French Reverse</figcaption>
         </figure>
+
+        <!-- 3. BABY BOOMER -->
         <figure class="tile reveal" data-h="tall">
           <div class="tile__art tile__art--blush">
-            <svg viewBox="0 0 200 300" aria-hidden="true"><path d="M75 30 Q100 0 125 30 L115 275 Q100 290 85 275 Z" fill="url(#tg2)"/><defs><linearGradient id="tg2" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff"/><stop offset=".5" stop-color="#f3e3cf"/><stop offset="1" stop-color="#d5a876"/></linearGradient></defs></svg>
+            <svg viewBox="0 0 220 340" aria-hidden="true" preserveAspectRatio="xMidYMax meet">
+              <defs>
+                <linearGradient id="g3-finger" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f5d5b8" stop-opacity="0"/><stop offset="1" stop-color="#e0b088" stop-opacity=".55"/></linearGradient>
+                <linearGradient id="g3-nail" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset=".42" stop-color="#fdeede"/><stop offset=".72" stop-color="#f3d8b9"/><stop offset="1" stop-color="#d5a67b"/></linearGradient>
+                <linearGradient id="g3-shine" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+              </defs>
+              <path d="M50 340 L50 100 Q50 48 110 35 Q170 48 170 100 L170 340 Z" fill="url(#g3-finger)"/>
+              <ellipse cx="110" cy="258" rx="46" ry="6" fill="#000" opacity=".08"/>
+              <path d="M62 100 Q62 50 110 43 Q158 50 158 100 L152 242 Q144 258 110 262 Q76 258 68 242 Z" fill="url(#g3-nail)"/>
+              <ellipse cx="92" cy="175" rx="11" ry="70" fill="url(#g3-shine)"/>
+              <path d="M68 244 Q110 262 152 244" stroke="#c89a75" stroke-width="1.2" fill="none" opacity=".45"/>
+            </svg>
           </div>
           <figcaption>Baby Boomer</figcaption>
         </figure>
+
+        <!-- 4. BURGUNDY -->
         <figure class="tile reveal" data-h="short">
           <div class="tile__art tile__art--rouge">
-            <svg viewBox="0 0 200 200" aria-hidden="true"><rect x="60" y="30" width="80" height="140" rx="38" fill="url(#tg3)"/><defs><linearGradient id="tg3" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#8a2a2a"/><stop offset="1" stop-color="#3a0f0f"/></linearGradient></defs></svg>
+            <svg viewBox="0 0 220 240" aria-hidden="true" preserveAspectRatio="xMidYMax meet">
+              <defs>
+                <linearGradient id="g4-finger" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f5d5b8" stop-opacity="0"/><stop offset="1" stop-color="#d9a887" stop-opacity=".5"/></linearGradient>
+                <linearGradient id="g4-nail" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#a13142"/><stop offset=".5" stop-color="#6f1822"/><stop offset="1" stop-color="#3d0d13"/></linearGradient>
+              </defs>
+              <path d="M50 240 L50 70 Q50 30 110 20 Q170 30 170 70 L170 240 Z" fill="url(#g4-finger)"/>
+              <ellipse cx="110" cy="178" rx="46" ry="5" fill="#000" opacity=".1"/>
+              <!-- square shape -->
+              <path d="M62 70 Q62 32 110 26 Q158 32 158 70 L156 168 Q150 182 110 184 Q70 182 64 168 Z" fill="url(#g4-nail)"/>
+              <!-- square tip (straight) -->
+              <path d="M64 168 L156 168 L154 182 Q130 186 110 186 Q90 186 66 182 Z" fill="#2a0a10" opacity=".6"/>
+              <ellipse cx="92" cy="115" rx="10" ry="40" fill="#fff" opacity=".22"/>
+              <path d="M68 172 Q110 186 152 172" stroke="#c89a75" stroke-width="1.2" fill="none" opacity=".35"/>
+            </svg>
           </div>
           <figcaption>Burgundy</figcaption>
         </figure>
+
+        <!-- 5. AUTUMN WARM -->
         <figure class="tile reveal" data-h="tall">
           <div class="tile__art tile__art--champagne">
-            <svg viewBox="0 0 200 300" aria-hidden="true"><ellipse cx="100" cy="150" rx="45" ry="130" fill="url(#tg4)"/><defs><linearGradient id="tg4" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f8e6d2"/><stop offset="1" stop-color="#a07858"/></linearGradient></defs></svg>
+            <svg viewBox="0 0 220 340" aria-hidden="true" preserveAspectRatio="xMidYMax meet">
+              <defs>
+                <linearGradient id="g5-finger" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f5d5b8" stop-opacity="0"/><stop offset="1" stop-color="#e0b088" stop-opacity=".5"/></linearGradient>
+                <linearGradient id="g5-nail" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#dca37c"/><stop offset=".5" stop-color="#a86f43"/><stop offset="1" stop-color="#6e4221"/></linearGradient>
+                <linearGradient id="g5-shine" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".45"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+              </defs>
+              <path d="M50 340 L50 100 Q50 48 110 35 Q170 48 170 100 L170 340 Z" fill="url(#g5-finger)"/>
+              <ellipse cx="110" cy="258" rx="46" ry="6" fill="#000" opacity=".1"/>
+              <path d="M62 100 Q62 50 110 43 Q158 50 158 100 L152 242 Q144 258 110 262 Q76 258 68 242 Z" fill="url(#g5-nail)"/>
+              <ellipse cx="92" cy="165" rx="12" ry="68" fill="url(#g5-shine)"/>
+              <path d="M68 244 Q110 262 152 244" stroke="#2a1810" stroke-width="1.2" fill="none" opacity=".3"/>
+            </svg>
           </div>
           <figcaption>Autumn Warm</figcaption>
         </figure>
+
+        <!-- 6. ESPRESSO MATTE -->
         <figure class="tile reveal" data-h="med">
           <div class="tile__art tile__art--espresso">
-            <svg viewBox="0 0 200 240" aria-hidden="true"><rect x="60" y="20" width="80" height="200" rx="38" fill="url(#tg5)"/><defs><linearGradient id="tg5" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#2a1e16"/><stop offset="1" stop-color="#5a4233"/></linearGradient></defs></svg>
+            <svg viewBox="0 0 220 280" aria-hidden="true" preserveAspectRatio="xMidYMax meet">
+              <defs>
+                <linearGradient id="g6-finger" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f5d5b8" stop-opacity="0"/><stop offset="1" stop-color="#d9a887" stop-opacity=".5"/></linearGradient>
+                <linearGradient id="g6-nail" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#4a3324"/><stop offset="1" stop-color="#2a1810"/></linearGradient>
+              </defs>
+              <path d="M50 280 L50 80 Q50 36 110 25 Q170 36 170 80 L170 280 Z" fill="url(#g6-finger)"/>
+              <ellipse cx="110" cy="208" rx="46" ry="6" fill="#000" opacity=".1"/>
+              <!-- square -->
+              <path d="M62 80 Q62 40 110 33 Q158 40 158 80 L156 196 Q150 210 110 212 Q70 210 64 196 Z" fill="url(#g6-nail)"/>
+              <path d="M64 196 L156 196 L154 210 Q130 214 110 214 Q90 214 66 210 Z" fill="#1a0f08" opacity=".7"/>
+              <!-- subtle matte sheen -->
+              <ellipse cx="92" cy="130" rx="10" ry="36" fill="#fff" opacity=".05"/>
+              <path d="M68 198 Q110 212 152 198" stroke="#c89a75" stroke-width="1.2" fill="none" opacity=".25"/>
+            </svg>
           </div>
           <figcaption>Espresso Matte</figcaption>
         </figure>
+
+        <!-- 7. ROSE MAT -->
         <figure class="tile reveal" data-h="med">
           <div class="tile__art tile__art--rose">
-            <svg viewBox="0 0 200 240" aria-hidden="true"><ellipse cx="100" cy="120" rx="40" ry="100" fill="url(#tg6)"/><defs><linearGradient id="tg6" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f5dccb"/><stop offset="1" stop-color="#c98b7a"/></linearGradient></defs></svg>
+            <svg viewBox="0 0 220 280" aria-hidden="true" preserveAspectRatio="xMidYMax meet">
+              <defs>
+                <linearGradient id="g7-finger" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f5d5b8" stop-opacity="0"/><stop offset="1" stop-color="#e0b088" stop-opacity=".5"/></linearGradient>
+                <linearGradient id="g7-nail" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e3b0a0"/><stop offset=".6" stop-color="#c98b7a"/><stop offset="1" stop-color="#a36957"/></linearGradient>
+              </defs>
+              <path d="M50 280 L50 80 Q50 36 110 25 Q170 36 170 80 L170 280 Z" fill="url(#g7-finger)"/>
+              <ellipse cx="110" cy="208" rx="46" ry="6" fill="#000" opacity=".08"/>
+              <path d="M62 80 Q62 40 110 33 Q158 40 158 80 L152 192 Q144 208 110 212 Q76 208 68 192 Z" fill="url(#g7-nail)"/>
+              <!-- matte = low shine -->
+              <ellipse cx="92" cy="130" rx="10" ry="44" fill="#fff" opacity=".1"/>
+              <path d="M68 194 Q110 212 152 194" stroke="#8a4535" stroke-width="1.2" fill="none" opacity=".35"/>
+            </svg>
           </div>
           <figcaption>Rose Mat</figcaption>
         </figure>
+
+        <!-- 8. SLIM NAILS -->
         <figure class="tile reveal" data-h="tall">
           <div class="tile__art tile__art--slim">
-            <svg viewBox="0 0 200 300" aria-hidden="true"><path d="M90 20 Q100 10 110 20 L105 285 Q100 290 95 285 Z" fill="url(#tg7)"/><defs><linearGradient id="tg7" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#e8d5bf"/></linearGradient></defs></svg>
+            <svg viewBox="0 0 220 340" aria-hidden="true" preserveAspectRatio="xMidYMax meet">
+              <defs>
+                <linearGradient id="g8-finger" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f5d5b8" stop-opacity="0"/><stop offset="1" stop-color="#e0b088" stop-opacity=".5"/></linearGradient>
+                <linearGradient id="g8-nail" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset=".3" stop-color="#fdeede"/><stop offset="1" stop-color="#c89967"/></linearGradient>
+                <linearGradient id="g8-shine" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".55"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+              </defs>
+              <path d="M55 340 L55 110 Q55 60 110 48 Q165 60 165 110 L165 340 Z" fill="url(#g8-finger)"/>
+              <ellipse cx="110" cy="268" rx="40" ry="6" fill="#000" opacity=".08"/>
+              <!-- slim elongated almond -->
+              <path d="M82 110 Q82 55 110 45 Q138 55 138 110 L130 252 Q122 268 110 270 Q98 268 90 252 Z" fill="url(#g8-nail)"/>
+              <path d="M82 110 Q82 55 110 45 Q138 55 138 110 L136 140 Q125 125 110 125 Q95 125 84 140 Z" fill="#fff" opacity=".55"/>
+              <ellipse cx="102" cy="175" rx="6" ry="65" fill="url(#g8-shine)"/>
+              <path d="M88 254 Q110 268 132 254" stroke="#c89a75" stroke-width="1" fill="none" opacity=".5"/>
+            </svg>
           </div>
           <figcaption>Slim Nails</figcaption>
         </figure>
@@ -785,17 +927,17 @@
           </ul>
 
           <div class="contact__socials">
-            <a href="#" aria-label="Instagram">
+            <a href="https://www.instagram.com/malina.arusandei_nail_trainer/" target="_blank" rel="noopener" aria-label="Instagram @malina.arusandei_nail_trainer" title="Instagram">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
             </a>
-            <a href="#" aria-label="Facebook">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M13 22v-8h3l.5-4H13V7.5c0-1.1.3-1.9 1.9-1.9H17V2.1A26 26 0 0 0 14.4 2C11.8 2 10 3.6 10 6.7V10H7v4h3v8z"/></svg>
-            </a>
-            <a href="#" aria-label="TikTok">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 8.5a6.3 6.3 0 0 1-4-1.4v7.3a5.5 5.5 0 1 1-5.5-5.5h1V12a2.7 2.7 0 1 0 2.7 2.7V2h2.8a4 4 0 0 0 3 3.6z"/></svg>
-            </a>
-            <a href="https://wa.me/40760056178" aria-label="WhatsApp">
+            <a href="https://wa.me/40760056178" target="_blank" rel="noopener" aria-label="WhatsApp 0760 056 178" title="WhatsApp">
               <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 6.3A7.9 7.9 0 0 0 12 4a8 8 0 0 0-6.8 12.2L4 21l5-1.3A8 8 0 0 0 20 12a7.9 7.9 0 0 0-2.4-5.7zM12 18.5a6.5 6.5 0 0 1-3.3-.9l-.2-.1-2.9.8.8-2.8-.2-.3a6.5 6.5 0 1 1 5.8 3.3zm3.6-4.9c-.2-.1-1.2-.6-1.4-.6-.2-.1-.3-.1-.4.1l-.6.7c-.1.1-.2.1-.4 0a5.3 5.3 0 0 1-2.6-2.3c-.2-.3.2-.3.5-1 .1-.1 0-.2 0-.3l-.6-1.3c-.1-.3-.3-.3-.4-.3h-.4a.7.7 0 0 0-.5.2 2 2 0 0 0-.6 1.5 3.5 3.5 0 0 0 .8 2 8 8 0 0 0 3 2.7c1.8.7 1.8.5 2.1.4a1.8 1.8 0 0 0 1.2-.8 1.4 1.4 0 0 0 .1-.8c-.1-.1-.2-.2-.4-.3z"/></svg>
+            </a>
+            <a href="mailto:arusandei21@gmail.com" aria-label="Email arusandei21@gmail.com" title="Email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+            </a>
+            <a href="https://malina-nails.com/" target="_blank" rel="noopener" aria-label="Academia online malina-nails.com" title="Academia online">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
             </a>
           </div>
         </div>
@@ -881,6 +1023,28 @@
           <span>Str. Lăcătuș Vodă, Nr. 26A, Iași</span>
           <a href="tel:+40760056178">0760 056 178</a>
           <a href="mailto:arusandei21@gmail.com">arusandei21@gmail.com</a>
+        </div>
+      </div>
+
+      <div class="footer__socials" aria-label="Urmărește-ne">
+        <span class="footer__socials-label">Urmărește-ne</span>
+        <div class="footer__socials-row">
+          <a href="https://www.instagram.com/malina.arusandei_nail_trainer/" target="_blank" rel="noopener" class="footer__social" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            <span>Instagram</span>
+          </a>
+          <a href="https://wa.me/40760056178" target="_blank" rel="noopener" class="footer__social" aria-label="WhatsApp">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.6 6.3A7.9 7.9 0 0 0 12 4a8 8 0 0 0-6.8 12.2L4 21l5-1.3A8 8 0 0 0 20 12a7.9 7.9 0 0 0-2.4-5.7zM12 18.5a6.5 6.5 0 0 1-3.3-.9l-.2-.1-2.9.8.8-2.8-.2-.3a6.5 6.5 0 1 1 5.8 3.3zm3.6-4.9c-.2-.1-1.2-.6-1.4-.6-.2-.1-.3-.1-.4.1l-.6.7c-.1.1-.2.1-.4 0a5.3 5.3 0 0 1-2.6-2.3c-.2-.3.2-.3.5-1 .1-.1 0-.2 0-.3l-.6-1.3c-.1-.3-.3-.3-.4-.3h-.4a.7.7 0 0 0-.5.2 2 2 0 0 0-.6 1.5 3.5 3.5 0 0 0 .8 2 8 8 0 0 0 3 2.7c1.8.7 1.8.5 2.1.4a1.8 1.8 0 0 0 1.2-.8 1.4 1.4 0 0 0 .1-.8c-.1-.1-.2-.2-.4-.3z"/></svg>
+            <span>WhatsApp</span>
+          </a>
+          <a href="mailto:arusandei21@gmail.com" class="footer__social" aria-label="Email">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+            <span>Email</span>
+          </a>
+          <a href="https://malina-nails.com/" target="_blank" rel="noopener" class="footer__social" aria-label="Academia online">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+            <span>Academia online</span>
+          </a>
         </div>
       </div>
 
