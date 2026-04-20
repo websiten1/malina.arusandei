@@ -1122,9 +1122,13 @@ h1, h2, h3, h4 {
   border-radius: 50%;
   background: var(--ink);
   color: var(--bg);
-  display: grid;
-  place-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
+  gap: 6px;
+  padding: 10px;
   box-shadow: 0 30px 60px -20px rgba(26,20,14,0.4);
   z-index: 3;
 }
@@ -1133,18 +1137,31 @@ h1, h2, h3, h4 {
   font-size: 2.5rem;
   font-weight: 400;
   line-height: 1;
-  display: block;
+  display: inline-block;
+  position: relative;
+  padding-right: 0.42em;
   font-variation-settings: "opsz" 144;
 }
-.about__badge strong span { font-size: 1.2rem; color: var(--gold-2); vertical-align: top; }
+.about__badge strong span {
+  position: absolute;
+  top: 0.05em;
+  right: 0;
+  font-size: 1.1rem;
+  color: var(--gold-2);
+  line-height: 1;
+  font-family: var(--font-display);
+  font-weight: 400;
+}
 .about__badge > span:last-child {
   font-size: 0.62rem;
   text-transform: uppercase;
   letter-spacing: 0.26em;
   color: var(--champagne);
   font-weight: 600;
-  margin-top: 6px;
   line-height: 1.5;
+  padding-left: 0.26em;
+  display: block;
+  width: 100%;
 }
 
 .about__content { padding: 10px 0; }
@@ -1908,9 +1925,10 @@ h1, h2, h3, h4 {
   .about__features { grid-template-columns: 1fr; }
   .about__visual { padding: 12px 12px 34px 12px; }
   .about__visual::before { inset: 0 20px 20px 0; }
-  .about__badge { width: 88px; height: 88px; right: 4px; top: 14px; }
-  .about__badge strong { font-size: 1.55rem; }
-  .about__badge span { font-size: 0.54rem; letter-spacing: 0.12em; }
+  .about__badge { width: 96px; height: 96px; right: 4px; top: 14px; gap: 4px; padding: 8px; }
+  .about__badge strong { font-size: 1.7rem; }
+  .about__badge strong span { font-size: 0.8rem; top: -1px; }
+  .about__badge > span:last-child { font-size: 0.5rem; letter-spacing: 0.18em; padding-left: 0.18em; }
   .about__signature { left: 16px; width: 84px; }
   .about__photo-caption { left: 14px; right: 14px; bottom: 14px; padding: 10px 14px; }
   .about__photo-caption span { font-size: 0.9rem; }
@@ -1991,9 +2009,10 @@ h1, h2, h3, h4 {
   .value__title { font-size: 1.25rem; }
   .testimonial { padding: 24px 20px; }
 
-  .about__badge { width: 76px; height: 76px; }
-  .about__badge strong { font-size: 1.3rem; }
-  .about__badge span { font-size: 0.5rem; }
+  .about__badge { width: 84px; height: 84px; gap: 3px; padding: 6px; }
+  .about__badge strong { font-size: 1.45rem; }
+  .about__badge strong span { font-size: 0.7rem; }
+  .about__badge > span:last-child { font-size: 0.46rem; letter-spacing: 0.16em; padding-left: 0.16em; }
 
   .footer__social { flex: 1 1 100%; padding: 12px 14px; font-size: 0.72rem; }
 }
